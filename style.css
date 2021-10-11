@@ -1,11 +1,12 @@
-body{
+.nav-bar .link-list{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
 }
-
 #particles-js{
-    width: 100%;
-    height:100%;
-    position:absolute;
     background-color: dodgerblue;
+    z-index: -100;
+    position:absolute;
+    width: 100vw;
+    height:50vh;
 }
