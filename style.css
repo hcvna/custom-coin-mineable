@@ -2,8 +2,6 @@
     background-color: dodgerblue;
     z-index: -100;
     position:absolute;
-    width: 100vw;
-    height:100vh;
 }
 
 .body-wrapper{
@@ -14,26 +12,28 @@
 .body-container{
     width: 75vw;
     display: flex;
-    row-gap: 20px;
+    row-gap: 10vh;
     flex-direction: column;
 }
 
 .nav-bar{
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    margin-top:2.5vh;
+    justify-content: space-between;
 }
 .nav-bar img{
-    width:50%;
+    width:30%;
     height:50%;
 }
 .nav-bar .link-list{
     width: 50%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 .link-list li{
     list-style-type:none;
+    margin: auto 25px;
 }
 .link-url{
     text-decoration: none;
@@ -43,30 +43,71 @@
 
 .main-content{
     display:flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     color: white;
 }
+@media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ 
+.main-content{
+    flex-wrap: wrap;
+    row-gap: 10vh;
+}
+#particles-js{
+    width: 100vw;
+    height:200vh;
+}
+}
+@media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
+.main-content{
+    flex-wrap: wrap;
+    row-gap: 10vh;
+}
+#particles-js{
+    width: 100vw;
+    height:150vh;
+}
+}
 
+@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+.main-content{
+    flex-wrap: nowrap;
+}
+#particles-js{
+    width: 100vw;
+    height:100vh;
+}
 .main-content .text-col{
     width: 50%;
 }
 
+.main-content .img-col{
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+}
+
+.main-content .img-col{
+    margin-left: 10vw;
+}
 .text-col .text-header{
     font-size: 50px;
     font-weight: 500;
 }
 
 .text-col .text-content{
-    font-size:20px;
+    font-size:25px;
     font-weight: 400;
-}
-
-.main-content .img-col{
-    max-width: 350px;
+    text-align: justify;
+    text-justify: distribute;
+    text-align-last: left;
 }
 
 .img-col img{
-    width:100%;
-    height:100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+
+
